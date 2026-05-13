@@ -5,7 +5,7 @@
 **让你的 Cursor 编辑器说中文 —— 一键翻译，一键还原，零副作用。**
 
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D16-green?logo=node.js)](https://nodejs.org)
-[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS-blue)](#)
+[![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-blue)](#)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](./LICENSE)
 [![Release](https://img.shields.io/badge/Release-Latest-orange?logo=github)](https://github.com/huiyi9420/cursor-i18n-tool/releases/latest)
 
@@ -85,6 +85,8 @@
 | Windows x64 | `cursor-i18n-tool-win-x64.exe` | 双击运行即可 |
 | macOS Intel | `cursor-i18n-tool-macos-x64` | Intel 芯片 Mac |
 | macOS Apple Silicon | `cursor-i18n-tool-macos-arm64` | M1/M2/M3/M4 芯片 Mac |
+| Linux x64 | `cursor-i18n-tool-linux-x64` | x86_64 Linux (Ubuntu/Debian 等) |
+| Linux ARM64 | `cursor-i18n-tool-linux-arm64` | ARM64 Linux |
 
 <details>
 <summary><b>macOS 使用说明</b></summary>
@@ -198,7 +200,7 @@ git push origin v1.1.0
 ```
 
 工作流会自动：
-1. 在 Windows/macOS 上构建三个平台的可执行文件
+1. 在 Windows/macOS/Linux 上构建五个平台的可执行文件
 2. 创建 GitHub Release
 3. 上传构建产物作为 Release 资产
 

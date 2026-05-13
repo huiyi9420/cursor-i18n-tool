@@ -7,6 +7,8 @@
 | Windows x64 | `cursor-i18n-tool-win-x64.exe` | 双击运行即可 |
 | macOS Intel | `cursor-i18n-tool-macos-x64` | Intel 芯片 Mac |
 | macOS Apple Silicon | `cursor-i18n-tool-macos-arm64` | M1/M2/M3/M4 芯片 Mac |
+| Linux x64 | `cursor-i18n-tool-linux-x64` | x86_64 Linux (Ubuntu/Debian 等) |
+| Linux ARM64 | `cursor-i18n-tool-linux-arm64` | ARM64 Linux |
 
 ### 使用方法
 
@@ -24,6 +26,15 @@ chmod +x cursor-i18n-tool-macos-arm64
 
 > 首次运行如提示「无法验证开发者」，请在系统设置 → 隐私与安全性 → 点击「仍要打开」。
 > 汉化工具会自动处理 macOS Gatekeeper 签名问题，无需手动操作。
+
+#### Linux
+```bash
+# 赋予执行权限
+chmod +x cursor-i18n-tool-linux-x64
+
+# 运行
+./cursor-i18n-tool-linux-x64
+```
 
 ### 汉化覆盖范围
 

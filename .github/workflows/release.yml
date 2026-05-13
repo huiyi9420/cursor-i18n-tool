@@ -13,17 +13,24 @@ jobs:
   build:
     runs-on: ${{ matrix.os }}
     strategy:
+      fail-fast: false
       matrix:
         include:
           - os: windows-latest
             target: node18-win-x64
-            artifact: cursor-i18n-tool-win-x64.exe
+            artifact: win-x64
           - os: macos-latest
             target: node18-macos-x64
-            artifact: cursor-i18n-tool-macos-x64
+            artifact: macos-x64
           - os: macos-latest
             target: node18-macos-arm64
-            artifact: cursor-i18n-tool-macos-arm64
+            artifact: macos-arm64
+          - os: ubuntu-latest
+            target: node18-linux-x64
+            artifact: linux-x64
+          - os: ubuntu-latest
+            target: node18-linux-arm64
+            artifact: linux-arm64
 
     steps:
       - uses: actions/checkout@v4
@@ -41,7 +48,8 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: ${{ matrix.artifact }}
-          path: dist/${{ matrix.artifact }}
+          path: dist/*
+          if-no-files-found: error
 
   release:
     needs: build
@@ -52,6 +60,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           path: artifacts
+          merge-multiple: false
 
       - name: List artifacts
         run: find artifacts -type f | head -20
@@ -63,6 +72,8 @@ jobs:
           name: Release ${{ github.ref_name }}
           body_path: RELEASE_NOTES.md
           files: |
-            artifacts/cursor-i18n-tool-win-x64.exe/cursor-i18n-tool-win-x64.exe
-            artifacts/cursor-i18n-tool-macos-x64/cursor-i18n-tool-macos-x64
-            artifacts/cursor-i18n-tool-macos-arm64/cursor-i18n-tool-macos-arm64
+            artifacts/win-x64/*
+            artifacts/macos-x64/*
+            artifacts/macos-arm64/*
+            artifacts/linux-x64/*
+            artifacts/linux-arm64/*
