@@ -7,7 +7,7 @@
 [![Node.js](https://img.shields.io/badge/Node.js-%3E%3D16-green?logo=node.js)](https://nodejs.org)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS-blue)](#)
 [![License](https://img.shields.io/badge/License-MIT-yellow)](./LICENSE)
-[![Release](https://img.shields.io/badge/Release-Latest-orange?logo=github)](../../releases/latest)
+[![Release](https://img.shields.io/badge/Release-Latest-orange?logo=github)](https://github.com/huiyi9420/cursor-i18n-tool/releases/latest)
 
 </div>
 
@@ -78,7 +78,7 @@
 
 ### 方式一：下载可执行文件（推荐，无需安装任何环境）
 
-前往 [Releases 页面](../../releases/latest) 下载对应平台的可执行文件：
+前往 [Releases 页面](https://github.com/huiyi9420/cursor-i18n-tool/releases/latest) 下载对应平台的可执行文件：
 
 | 平台 | 文件 | 说明 |
 |------|------|------|
@@ -120,7 +120,7 @@ chmod +x cursor-i18n-tool-macos-arm64
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/Wuyf5275/cursor-i18n-tool.git
+git clone https://github.com/huiyi9420/cursor-i18n-tool.git
 cd cursor-i18n-tool
 
 # 2. 安装依赖
@@ -245,7 +245,7 @@ git push origin v1.1.0
 ## 🙏 致谢
 
 - 感谢所有为翻译词条做出贡献的小伙伴 —— 海洋饼干、诺导、发发、苗苗、蓉蓉、木木文、蜗牛、杨书记
-- 灵感来源于社区对 Cursor 中文化的呼声
+- 基于 [不辞水](https://github.com/Wuyf5275/cursor-i18n-tool) 的原始项目扩展，感谢原作者
 
 ---
 
@@ -253,6 +253,6 @@ git push origin v1.1.0
 
 **如果这个工具帮到了你，请给个 ⭐ Star 支持一下！**
 
-*Made with ❤️ by 不辞水*
+*Fork of [Wuyf5275/cursor-i18n-tool](https://github.com/Wuyf5275/cursor-i18n-tool) with expanded translations*
 
 </div>
